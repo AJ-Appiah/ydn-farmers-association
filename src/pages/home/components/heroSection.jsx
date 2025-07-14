@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import heroImage from '../assets/images/hero.jpg'; // Replace with actual image
+import React from "react";
+import heroImage from "../../../assets/images/hero.jpg";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -17,7 +17,8 @@ const HeroSection = () => {
           Empowering Farmers, Growing Futures
         </h1>
         <p className="mt-4 text-lg md:text-2xl max-w-2xl text-white">
-          We are a community of rice farmers in Adansi South using sustainable and modern practices to build a better future.
+          We are a community of rice farmers in Adansi South using sustainable
+          and modern practices to build a better future.
         </p>
         <Link
           to="/about/key-team"
