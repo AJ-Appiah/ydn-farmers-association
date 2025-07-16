@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const AboutHero = () => {
   return (
     <section
-      className="text-white flex flex-col items-center pb-[52px] pt-[67px]"
+      className="text-white flex flex-col items-center pb-[52px] pt-[67px] bg-center"
       style={{ backgroundImage: `url(${AboutHeroImage})` }}
     >
       <h1 className="mb-2 font-bold">ABOUT US </h1>
