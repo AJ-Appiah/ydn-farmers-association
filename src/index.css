@@ -2,13 +2,13 @@
 
 /* 🌱 YDN Brand Colors */
 @theme {
-  --color-ydn-green: #2E7D32;
-  --color-ydn-orange: #F57C00;
-  --color-ydn-yellow: #FFD54F;
-  --color-ydn-purple: #8E24AA;
-  --color-ydn-blue: #1E88E5;
-  --color-ydn-red: #EF5350;
-  --color-ydn-dark: #1B4332;
+  --color-ydn-green: #2e7d32;
+  --color-ydn-orange: #f57c00;
+  --color-ydn-yellow: #ffd54f;
+  --color-ydn-purple: #8e24aa;
+  --color-ydn-blue: #1e88e5;
+  --color-ydn-red: #ef5350;
+  --color-ydn-dark: #1b4332;
 }
 
 /* 🌐 Base Styles */
@@ -35,11 +35,11 @@ body {
   background-color: white; /* You can change this if using dark mode */
 }
 
-a {
+/* a {
   font-weight: 500;
   color: #646cff;
   text-decoration: none;
-}
+} */
 a:hover {
   color: #535bf2;
 }
@@ -86,20 +86,48 @@ button:focus-visible {
 /* 🎨 YDN Utility Classes */
 @layer utilities {
   /* Backgrounds */
-  .bg-ydn-green   { background-color: var(--color-ydn-green); }
-  .bg-ydn-orange  { background-color: var(--color-ydn-orange); }
-  .bg-ydn-yellow  { background-color: var(--color-ydn-yellow); }
-  .bg-ydn-purple  { background-color: var(--color-ydn-purple); }
-  .bg-ydn-blue    { background-color: var(--color-ydn-blue); }
-  .bg-ydn-red     { background-color: var(--color-ydn-red); }
-  .bg-ydn-dark    { background-color: var(--color-ydn-dark); }
+  .bg-ydn-green {
+    background-color: var(--color-ydn-green);
+  }
+  .bg-ydn-orange {
+    background-color: var(--color-ydn-orange);
+  }
+  .bg-ydn-yellow {
+    background-color: var(--color-ydn-yellow);
+  }
+  .bg-ydn-purple {
+    background-color: var(--color-ydn-purple);
+  }
+  .bg-ydn-blue {
+    background-color: var(--color-ydn-blue);
+  }
+  .bg-ydn-red {
+    background-color: var(--color-ydn-red);
+  }
+  .bg-ydn-dark {
+    background-color: var(--color-ydn-dark);
+  }
 
   /* Text colors */
-  .text-ydn-green   { color: var(--color-ydn-green); }
-  .text-ydn-orange  { color: var(--color-ydn-orange); }
-  .text-ydn-yellow  { color: var(--color-ydn-yellow); }
-  .text-ydn-purple  { color: var(--color-ydn-purple); }
-  .text-ydn-blue    { color: var(--color-ydn-blue); }
-  .text-ydn-red     { color: var(--color-ydn-red); }
-  .text-ydn-dark    { color: var(--color-ydn-dark); }
+  .text-ydn-green {
+    color: var(--color-ydn-green);
+  }
+  .text-ydn-orange {
+    color: var(--color-ydn-orange);
+  }
+  .text-ydn-yellow {
+    color: var(--color-ydn-yellow);
+  }
+  .text-ydn-purple {
+    color: var(--color-ydn-purple);
+  }
+  .text-ydn-blue {
+    color: var(--color-ydn-blue);
+  }
+  .text-ydn-red {
+    color: var(--color-ydn-red);
+  }
+  .text-ydn-dark {
+    color: var(--color-ydn-dark);
+  }
 }
