@@ -1,6 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import AboutHero from "./components/aboutHero";
+import OurStory from "./components/ourStory";
 
 const AboutPage = () => {
   return (
@@ -21,9 +22,12 @@ const AboutPage = () => {
     //   {/* 🔥 This is where nested routes will show up */}
     //   <Outlet />{" "}
     // </div>
-    <section>
+    <main>
       <AboutHero />
-    </section>
+      <section className="pt-24">
+        <OurStory />
+      </section>
+    </main>
   );
 };
 
