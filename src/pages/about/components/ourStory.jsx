@@ -3,8 +3,8 @@ import OurStoryImage from "../../../assets/images/our-story-image.jpg";
 
 const OurStory = () => {
   return (
-    <section className=" w-full">
-      <div className="mx-auto my-0 max-w-[1200px] w-full">
+    <section className=" w-full ">
+      <div className="container">
         <article className="flex gap-8 items-center">
           <div className="flex-1 min-w-0">
             <p>Since Est. 2005</p>

@@ -2,6 +2,12 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import AboutHero from "./components/aboutHero";
 import OurStory from "./components/ourStory";
+import OurAim from "./components/ourAim";
+import MainActivities from "./components/mainActivities";
+import Stats from "./components/stats";
+import BoardMembers from "./components/board";
+import DedicatedTeam from "./components/dedicatedTeam";
+import AimSubsection from "./components/aimSubsection";
 
 const AboutPage = () => {
   return (
@@ -26,6 +32,12 @@ const AboutPage = () => {
       <AboutHero />
       <section className="pt-24">
         <OurStory />
+        <OurAim />
+        <AimSubsection />
+        <MainActivities />
+        <Stats />
+        <BoardMembers />
+        <DedicatedTeam />
       </section>
     </main>
   );
