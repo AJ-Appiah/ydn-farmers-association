@@ -1,5 +1,6 @@
 import React from "react";
 import OurStoryImage from "../../../assets/images/our-story-image.jpg";
+import SectionHeaders from "../../../components/sectionHeaders";
 
 const OurStory = () => {
   return (
@@ -7,12 +8,8 @@ const OurStory = () => {
       <div className="container">
         <article className="flex gap-8 items-center">
           <div className="flex-1 min-w-0">
-            <p>Since Est. 2005</p>
-            <h1>
-              <span className="text-2xl text-[#242424] font-bold">
-                OUR HISTORY
-              </span>
-            </h1>
+            <SectionHeaders subTitle="since est. 2005" title="Our history" />
+
             <p className="text-[#8e8e8d] text-base">
               For many years, farmers, especially small-scale holders have
               suffered silently under unfavourable national agricultural
