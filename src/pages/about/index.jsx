@@ -1,5 +1,4 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
 import AboutHero from "./components/aboutHero";
 import OurStory from "./components/ourStory";
 import OurAim from "./components/ourAim";
