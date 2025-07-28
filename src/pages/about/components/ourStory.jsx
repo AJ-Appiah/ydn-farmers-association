@@ -1,16 +1,17 @@
 import React from "react";
 import OurStoryImage from "../../../assets/images/our-story-image.jpg";
 import SectionHeaders from "../../../components/sectionHeaders";
+import { IoChevronForwardSharp } from "react-icons/io5";
 
 const OurStory = () => {
   return (
     <section className=" w-full ">
       <div className="container">
         <article className="flex gap-8 items-center">
-          <div className="flex-1 min-w-0">
+          <div className="flex-[60%] min-w-0 pl-6">
             <SectionHeaders subTitle="since est. 2005" title="Our history" />
 
-            <p className="text-[#8e8e8d] text-base">
+            <p className="text-[#8e8e8d] text-[14px] leading-[26px]">
               For many years, farmers, especially small-scale holders have
               suffered silently under unfavourable national agricultural
               policies that threaten their livelihoods and dignity. The
@@ -31,12 +32,29 @@ const OurStory = () => {
               with the Department of Social Welfare as a Non-Governmental
               Organisation, (NGO).
             </p>
+
+            <div className="flex mt-12">
+              <IoChevronForwardSharp
+                color="#8e8e8d"
+                size={12}
+                className="mr-28"
+              />
+              <IoChevronForwardSharp color="#8e8e8d" size={12} />
+            </div>
           </div>
 
-          <div className="flex-1">
+          <div className="flex-[40%] ">
             <img src={OurStoryImage} alt="" />
-            <h2 className="mt-11 mb-5"> Our vision </h2>
-            <p>
+
+            <header className="mt-11 mb-5">
+              <h2 className="text-lg roboto-slab--700 relative uppercase font-bold text-[var(--color-heading)] ">
+                <span className="relative pr-2.5 ">
+                  our vision
+                  <div className="w-12 h-0.5 bg-[#99c802] absolute -right-11 top-4"></div>
+                </span>
+              </h2>
+            </header>
+            <p className="text-[#8e8e8d] text-base">
               Our vision is to provide a life of dignity for the peasant
               farmers.
             </p>
