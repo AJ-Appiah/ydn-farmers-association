@@ -1,19 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import "tailwindcss";
+
+.roboto-slab {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.roboto-slab--700 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+}
+
+.pt-serif-regular {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pt-serif-bold {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.pt-serif-regular-italic {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.pt-serif-bold-italic {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+}
 
 /* 🌱 YDN Brand Colors */
 @theme {
-  --color-ydn-green: #2E7D32;
-  --color-ydn-orange: #F57C00;
-  --color-ydn-yellow: #FFD54F;
-  --color-ydn-purple: #8E24AA;
-  --color-ydn-blue: #1E88E5;
-  --color-ydn-red: #EF5350;
-  --color-ydn-dark: #1B4332;
+  --color-ydn-green: #2e7d32;
+  --color-ydn-orange: #f57c00;
+  --color-ydn-yellow: #ffd54f;
+  --color-ydn-purple: #8e24aa;
+  --color-ydn-blue: #1e88e5;
+  --color-ydn-red: #ef5350;
+  --color-ydn-dark: #1b4332;
+  --color-heading: #242424;
 }
 
 /* 🌐 Base Styles */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; */
   line-height: 1.5;
   font-weight: 400;
 
@@ -33,19 +72,87 @@ body {
   width: 100%;
   min-height: 100vh;
   background-color: white; /* You can change this if using dark mode */
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 
-a {
+.members-section--overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(127, 164, 9, 0.75);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: height 0.5s ease;
+}
+
+.members-section--container:hover .members-section--overlay {
+  height: 100%;
+}
+
+/* Define the keyframe animation */
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(250%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInDownSocials {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(250%);
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to elements */
+.slide-in-down {
+  animation-name: slideInDown;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.6s;
+  animation-fill-mode: both;
+}
+
+.members-section--container:hover .circle-icon {
+  -webkit-animation: slideInDown 0.6s ease-in-out 0.6s both;
+  animation: slideInDown 0.6s ease-in-out 0.6s both;
+}
+
+/* a {
   font-weight: 500;
   color: #646cff;
   text-decoration: none;
-}
+} */
 a:hover {
   color: #535bf2;
 }
 
+.header-color {
+  color: #242424;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 h1 {
-  font-size: 3.2em;
+  font-size: 2.2em;
   line-height: 1.1;
 }
 
@@ -61,9 +168,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -86,20 +195,71 @@ button:focus-visible {
 /* 🎨 YDN Utility Classes */
 @layer utilities {
   /* Backgrounds */
-  .bg-ydn-green   { background-color: var(--color-ydn-green); }
-  .bg-ydn-orange  { background-color: var(--color-ydn-orange); }
-  .bg-ydn-yellow  { background-color: var(--color-ydn-yellow); }
-  .bg-ydn-purple  { background-color: var(--color-ydn-purple); }
-  .bg-ydn-blue    { background-color: var(--color-ydn-blue); }
-  .bg-ydn-red     { background-color: var(--color-ydn-red); }
-  .bg-ydn-dark    { background-color: var(--color-ydn-dark); }
+  .bg-ydn-green {
+    background-color: var(--color-ydn-green);
+  }
+  .bg-ydn-orange {
+    background-color: var(--color-ydn-orange);
+  }
+  .bg-ydn-yellow {
+    background-color: var(--color-ydn-yellow);
+  }
+  .bg-ydn-purple {
+    background-color: var(--color-ydn-purple);
+  }
+  .bg-ydn-blue {
+    background-color: var(--color-ydn-blue);
+  }
+  .bg-ydn-red {
+    background-color: var(--color-ydn-red);
+  }
+  .bg-ydn-dark {
+    background-color: var(--color-ydn-dark);
+  }
 
   /* Text colors */
-  .text-ydn-green   { color: var(--color-ydn-green); }
-  .text-ydn-orange  { color: var(--color-ydn-orange); }
-  .text-ydn-yellow  { color: var(--color-ydn-yellow); }
-  .text-ydn-purple  { color: var(--color-ydn-purple); }
-  .text-ydn-blue    { color: var(--color-ydn-blue); }
-  .text-ydn-red     { color: var(--color-ydn-red); }
-  .text-ydn-dark    { color: var(--color-ydn-dark); }
+  .text-ydn-green {
+    color: var(--color-ydn-green);
+  }
+  .text-ydn-orange {
+    color: var(--color-ydn-orange);
+  }
+  .text-ydn-yellow {
+    color: var(--color-ydn-yellow);
+  }
+  .text-ydn-purple {
+    color: var(--color-ydn-purple);
+  }
+  .text-ydn-blue {
+    color: var(--color-ydn-blue);
+  }
+  .text-ydn-red {
+    color: var(--color-ydn-red);
+  }
+  .text-ydn-dark {
+    color: var(--color-ydn-dark);
+  }
+}
+
+.tagline-img {
+  background-image: url(./assets/images/statistics-bg-img.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 280px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.tagline-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
 }
