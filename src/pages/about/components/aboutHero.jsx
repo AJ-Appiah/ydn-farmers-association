@@ -14,7 +14,7 @@ const AboutHero = () => {
         <li className="pr-[3px]">
           <Link to="/">HOME </Link>
         </li>
-        <li>/ ABOUT US</li>
+        <li className="">/ ABOUT US</li>
       </ul>
     </section>
   );

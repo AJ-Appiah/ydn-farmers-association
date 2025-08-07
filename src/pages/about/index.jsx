@@ -7,6 +7,7 @@ import Stats from "./components/stats";
 import BoardMembers from "./components/board";
 import DedicatedTeam from "./components/dedicatedTeam";
 import AimSubsection from "./components/aimSubsection";
+import PagesHero from "../../components/pagesHero";
 
 const AboutPage = () => {
   return (
@@ -28,7 +29,7 @@ const AboutPage = () => {
     //   <Outlet />{" "}
     // </div>
     <main>
-      <AboutHero />
+      <PagesHero pageName="About Us" pageTitle="About us" />
       <section className="pt-24">
         <OurStory />
         <OurAim />
