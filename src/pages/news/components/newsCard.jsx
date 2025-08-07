@@ -12,7 +12,12 @@ const NewsCard = ({
   return (
     <div className="px-4 ">
       <div className="relative">
-        <img src={imageForPost || NewsImage} alt="Image for news Post" />
+        <img
+          src={imageForPost || NewsImage}
+          alt="Image for news Post"
+          width="370"
+          height="202"
+        />
 
         <div className="bg-ydn-green text-white px-3 py-1 flex flex-col items-center absolute bottom-0 right-0 pt-serif-italic--500">
           <p className="pt-serif-regular-italic text-[25px]"> {dayOfMonth}</p>
