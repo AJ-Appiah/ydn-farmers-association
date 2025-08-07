@@ -3,7 +3,7 @@ import React from "react";
 const SectionHeaders = ({ subTitle, title, mb = "mb-10" }) => {
   return (
     <header className={`${mb}`}>
-      <p className="text-[18px] pt-serif-regular-italic capitalize text-ydn-green">
+      <p className="text-[18px] pt-serif-regular-italic capitalize text-[#8d8d8d]">
         {subTitle}
       </p>
 
