@@ -107,6 +107,17 @@ body {
   }
 }
 
+@keyframes slideInDownSocials {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(250%);
+    opacity: 1;
+  }
+}
+
 /* Apply the animation to elements */
 .slide-in-down {
   animation-name: slideInDown;
